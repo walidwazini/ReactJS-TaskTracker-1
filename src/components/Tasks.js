@@ -1,31 +1,20 @@
-import React from 'react'
 
-const tasksList = [
-    {
-        id: 1,
-        text: 'Appt dentist',
-        date: '15/8/2021',
-        reminder: true,
-    },
-    {
-        id: 1,
-        text: 'Appt dentist',
-        date: '15/8/2021',
-        reminder: true,
-    },
-    {
-        id: 1,
-        text: 'Appt dentist',
-        date: '15/8/2021',
-        reminder: true,
-    }
-]
+import SingleTask from "./SingleTask"
 
-const Tasks = () => {
+const Tasks = ({ tasks, onDelete1, onToggle1 }) => {
     return (
-        <div>
-            
-        </div>
+        <>
+            {tasks.map((taskPar, index) => (
+                <div>
+                    <SingleTask 
+                    key={index} 
+                    taskPar={taskPar} 
+                    onDelete2={onDelete1} 
+                    onToggle2={onToggle1}
+                    />
+                </div>
+            ))}
+        </>
     )
 }
 
